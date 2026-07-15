@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://verostudio.pl/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/o-nas.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/o-nas.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/uslugi.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/uslugi.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/portfolio.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/portfolio.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/cennik.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/cennik.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/blog.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/demo.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/demo.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/kontakt.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/kontakt.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/index.html"/>
+  </url>
+</urlset>

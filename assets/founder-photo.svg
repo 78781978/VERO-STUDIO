@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141416"/>
+      <stop offset="100%" stop-color="#0A0A0B"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8D6A0"/>
+      <stop offset="45%" stop-color="#C9A24B"/>
+      <stop offset="100%" stop-color="#8C6D2F"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="799" height="999" fill="none" stroke="#C9A24B" stroke-opacity="0.25"/>
+  <circle cx="400.0" cy="470.0" r="46" fill="none" stroke="url(#gold)" stroke-width="1.4"/>
+  <circle cx="400.0" cy="470.0" r="4" fill="url(#gold)"/>
+  <text x="400.0" y="555.0" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#C9A24B" text-anchor="middle">Fotografia — do podmiany</text>
+  <text x="400.0" y="582.0" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#FFFFFF" fill-opacity="0.4" text-anchor="middle">VERO STUDIO</text>
+</svg>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Demo — Chatbot &amp; AI Agent Live | Vero Studio</title>
+<meta name="description" content="See a live simulation of an AI chatbot and an AI agent workflow — the exact kind of solutions Vero Studio can implement for your business.">
+<link rel="canonical" href="https://verostudio.pl/en/demo.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Demo — Vero Studio">
+<meta property="og:description" content="AI Chatbot and AI Agent in action — an interactive showcase.">
+<meta property="og:image" content="../logo.png">
+<link rel="alternate" hreflang="pl" href="../demo.html">
+<link rel="icon" type="image/png" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo"><img src="../logo.png" alt="Vero Studio logo"><span class="logo-word">VERO <b>STUDIO</b></span></a>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="o-nas.html">About</a></li>
+        <li><a href="uslugi.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="cennik.html">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <div class="lang-switch"><a href="../demo.html">PL</a><span>/</span><a href="demo.html" class="active">EN</a></div>
+      <a href="kontakt.html" class="btn btn--gold btn--sm">Book a Call</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <canvas class="hero-nodes" style="position:absolute;inset:0;opacity:0.35;"></canvas>
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>AI Demo</span></div>
+    <h1>See AI <span class="gold-text">in action</span></h1>
+    <p>Interactive simulations showing how a chatbot and an AI agent could work for your business. This is an illustrative demo — the final implementation is tailored to your data and processes.</p>
+  </div>
+</section>
+
+<section id="chatbot" class="section">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">Demo 01 · Chatbot</span>
+        <h2>An assistant that never sleeps</h2>
+        <p>This chatbot answers customer questions, qualifies inquiries and suggests the next step — booking a consultation. The conversation below is a recorded demo script; click "Replay" to watch it again, or type your own message.</p>
+        <ul class="values-list">
+          <li><div><strong>Tone matched to your brand</strong><br>The chatbot speaks your company's language, not a generic script.</div></li>
+          <li><div><strong>Lead qualification</strong><br>It recognizes the visitor's intent and routes them to the right action.</div></li>
+          <li><div><strong>Calendar &amp; CRM integration</strong><br>It can propose a consultation time on its own.</div></li>
+        </ul>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="demo-shell">
+          <div class="demo-shell-head">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="demo-shell-title">Vero Studio Assistant — demo</span>
+          </div>
+          <div class="chat-window" data-chat-window></div>
+          <div class="demo-replay"><button class="btn btn--outline-dark btn--sm" data-chat-replay type="button">Replay</button></div>
+          <form class="chat-input-row" data-chat-form data-fallback="Thanks for your message — this is a demo version. In a real deployment, the assistant answers based on your company's own knowledge, 24/7.">
+            <input type="text" placeholder="Type a message…" aria-label="Type a message to the demo chatbot">
+            <button type="submit" aria-label="Send">→</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="agent" class="section section--black">
+  <div class="container">
+    <div class="split">
+      <div class="reveal reveal-delay-1" style="order:2;">
+        <div class="demo-shell">
+          <div class="demo-shell-head">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="demo-shell-title">AI Agent — workflow</span>
+          </div>
+          <div class="agent-flow">
+            <div class="agent-step active" data-agent-step>
+              <div class="agent-step-icon">1</div>
+              <div>
+                <div class="agent-step-title">Receive request</div>
+                <div class="agent-step-desc">The agent reads the customer's message from a form, email or chat.</div>
+              </div>
+              <div class="agent-step-status">Done</div>
+            </div>
+            <div class="agent-step" data-agent-step>
+              <div class="agent-step-icon">2</div>
+              <div>
+                <div class="agent-step-title">Analyze &amp; classify</div>
+                <div class="agent-step-desc">Identifies the request type, priority and missing information.</div>
+              </div>
+              <div class="agent-step-status">In progress</div>
+            </div>
+            <div class="agent-step" data-agent-step>
+              <div class="agent-step-icon">3</div>
+              <div>
+                <div class="agent-step-title">Enrich with data</div>
+                <div class="agent-step-desc">Checks the CRM and the customer's prior contact history.</div>
+              </div>
+              <div class="agent-step-status">Pending</div>
+            </div>
+            <div class="agent-step" data-agent-step>
+              <div class="agent-step-icon">4</div>
+              <div>
+                <div class="agent-step-title">Prepare an offer</div>
+                <div class="agent-step-desc">Generates a personalized response or offer based on the data.</div>
+              </div>
+              <div class="agent-step-status">Pending</div>
+            </div>
+            <div class="agent-step" data-agent-step>
+              <div class="agent-step-icon">5</div>
+              <div>
+                <div class="agent-step-title">Hand off to the team</div>
+                <div class="agent-step-desc">Sends a summary to the right person or finalizes the task itself.</div>
+              </div>
+              <div class="agent-step-status">Pending</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="order:1;">
+        <span class="eyebrow">Demo 02 · AI Agent</span>
+        <h2>Work that happens in the background</h2>
+        <p>An AI agent is more than a chatbot — it independently handles multi-step tasks: analyzing a request, filling in missing data, preparing a response, and passing the case along. The panel above shows a simplified, looping preview of such a workflow.</p>
+        <ul class="values-list">
+          <li><div><strong>Multi-step tasks</strong><br>The agent combines several steps into one coherent process without manual intervention.</div></li>
+          <li><div><strong>Background operation</strong><br>It works whether you're online or not.</div></li>
+          <li><div><strong>Full control</strong><br>You define when the agent acts on its own and when it asks for confirmation.</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container reveal">
+    <span class="eyebrow" style="justify-content:center;">Liked the demo?</span>
+    <h2>Let's build this system for your business</h2>
+    <div class="cta-actions">
+      <a href="kontakt.html" class="btn btn--gold">Book a Consultation</a>
+      <a href="uslugi.html" class="btn btn--emerald">View Full Offering</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="../logo.png" alt="Vero Studio"><span>VERO STUDIO</span></div>
+        <p>Strategy. Design. Intelligent Automation. A boutique studio combining websites, eCommerce and AI automation with a personal touch.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">IN</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="o-nas.html">About</a></li>
+          <li><a href="uslugi.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="cennik.html">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="kontakt.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="uslugi.html#websites">Websites</a></li>
+          <li><a href="uslugi.html#ecommerce">eCommerce</a></li>
+          <li><a href="uslugi.html#automation">AI Automation</a></li>
+          <li><a href="uslugi.html#chatbots">Chatbots &amp; AI Agents</a></li>
+          <li><a href="demo.html">See AI Demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Wioletta Pazdańska</li>
+          <li>hello@verostudio.pl</li>
+          <li>+48 000 000 000</li>
+          <li>Kraków, Poland · remote worldwide</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Vero Studio by Wioletta Pazdańska. All rights reserved.</span>
+      <span>* This demo is illustrative and does not connect to a real AI engine.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.__VERO_CHAT_SCRIPT__ = [
+  { role: 'bot', text: "Hi! I'm the Vero Studio AI assistant. How can I help? 👋" },
+  { role: 'user', text: "Hi, I'm interested in a website quote." },
+  { role: 'bot', text: "Great! Would you like an image website, or more of an online store?" },
+  { role: 'user', text: "An image website for my consulting business." },
+  { role: 'bot', text: "Got it. For projects like this we usually start with the Starter package (from €900 net). Would you like me to book a free consultation with Wioletta for you?" },
+  { role: 'user', text: "Yes, please." },
+  { role: 'bot', text: "Perfect — I've prepared some time slots. Check the \"Contact\" section to pick a convenient time. Talk soon! ✨" }
+];
+</script>
+<script src="../script.js"></script>
+</body>
+</html>

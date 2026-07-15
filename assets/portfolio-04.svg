@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141416"/>
+      <stop offset="100%" stop-color="#0A0A0B"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8D6A0"/>
+      <stop offset="45%" stop-color="#C9A24B"/>
+      <stop offset="100%" stop-color="#8C6D2F"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="899" height="699" fill="none" stroke="#C9A24B" stroke-opacity="0.25"/>
+  <circle cx="450.0" cy="320.0" r="46" fill="none" stroke="url(#gold)" stroke-width="1.4"/>
+  <circle cx="450.0" cy="320.0" r="4" fill="url(#gold)"/>
+  <text x="450.0" y="405.0" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#C9A24B" text-anchor="middle">Case Study 04</text>
+  <text x="450.0" y="432.0" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#FFFFFF" fill-opacity="0.4" text-anchor="middle">PLACEHOLDER</text>
+</svg>
