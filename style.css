@@ -197,12 +197,12 @@ p{ margin: 0 0 16px; color: var(--gray); }
 .site-header .container{
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap: 20px;
+  justify-content:flex-start;
+  gap: 32px;
   max-width: 1920px;
 }
 .logo{ flex-shrink:0; display:flex; align-items:center; gap:20px; }
-.logo img{ height: 122px; width:auto; display:block; border-radius: 50%; background: var(--white); padding: 7px; }
+.logo img{ height: 183px; width:auto; display:block; border-radius: 50%; background: var(--white); padding: 7px; }
 .logo-word{ font-family: var(--font-heading); font-size: 2.02rem; letter-spacing: 5px; color: var(--white); }
 .logo-word b{ color: var(--gold); font-weight:600; }
 
@@ -247,7 +247,7 @@ p{ margin: 0 0 16px; color: var(--gray); }
 .main-nav a.active::after{ width:100%; }
 .main-nav a.active{ color: var(--gold); }
 
-.header-cta{ display:flex; align-items:center; gap:18px; flex-shrink:0; }
+.header-cta{ display:flex; align-items:center; gap:18px; flex-shrink:0; margin-left:auto; }
 .lang-switch{ display:flex; gap:6px; font-family: var(--font-heading); font-size:0.78rem; letter-spacing:1px; }
 .lang-switch a{ color: rgba(255,255,255,0.5); padding: 4px 6px; }
 .lang-switch a.active{ color: var(--gold); }
@@ -272,6 +272,11 @@ p{ margin: 0 0 16px; color: var(--gray); }
 }
 .hero .container{ position:relative; z-index:2; }
 .hero-content{ max-width: 760px; position:relative; }
+.hero-content > .eyebrow,
+.hero-content > h1,
+.hero-content > p.lead,
+.hero-content > .hero-actions,
+.hero-content > .hero-badges{ position:relative; z-index:2; }
 .hero-content h1{ color: var(--white); }
 .hero-content p.lead{ color: rgba(255,255,255,0.65); font-size: 1.15rem; max-width: 560px; }
 .hero-actions{ display:flex; gap:18px; flex-wrap:wrap; margin-top: 8px; }
@@ -296,30 +301,51 @@ p{ margin: 0 0 16px; color: var(--gray); }
   color: rgba(255,255,255,0.5);
 }
 
-/* ===== Decorative planets ===== */
-.planet{ position:absolute; border-radius:50%; pointer-events:none; z-index:1; }
+/* ===== Decorative orbiting planets =====
+   Each planet sits on its own concentric ring (different radius) around
+   the center of the hero text, so the three can never collide — and each
+   ring spins at its own very slow speed. Planted first in the DOM (below),
+   so the hero text — added after — naturally paints on top of them when
+   an orbit swings behind it. */
+.orbit{
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 0; height: 0;
+  pointer-events: none;
+}
+.orbit-neptune{ animation: orbitSpin 130s linear infinite; animation-delay: -18s; }
+.orbit-saturn{ animation: orbitSpin 190s linear infinite; animation-delay: -95s; }
+.orbit-mars{ animation: orbitSpin 95s linear infinite; animation-delay: -50s; }
+
+.planet{ position:absolute; top:0; left:0; border-radius:50%; pointer-events:none; z-index:1; }
 .planet-neptune{
-  top: 150px; right: 7%;
-  width: 60px; height: 60px;
+  width: 50px; height: 50px;
+  transform: translate(340px, -50%);
   background: radial-gradient(circle at 32% 28%, #A9CDF0 0%, #3E6FC0 48%, #14264d 100%);
-  box-shadow: 0 0 24px rgba(62,111,192,0.5), inset -6px -6px 14px rgba(0,0,0,0.35);
-  animation: planetSpin 40s linear infinite;
+  box-shadow: 0 0 22px rgba(62,111,192,0.45), inset -6px -6px 14px rgba(0,0,0,0.35);
 }
-.planet-venus{
-  top: 54%; right: 102%;
-  width: 81px; height: 81px;
-  background: radial-gradient(circle at 32% 28%, #F8E7BD 0%, #D9A65A 48%, #7c4f22 100%);
-  box-shadow: 0 0 26px rgba(217,166,90,0.45), inset -8px -8px 16px rgba(0,0,0,0.3);
-  animation: planetSpin 55s linear infinite;
+.planet-saturn{
+  width: 66px; height: 66px;
+  transform: translate(560px, -50%);
+  background: radial-gradient(circle at 32% 28%, #F3E3C0 0%, #C9A165 48%, #6e4d24 100%);
+  box-shadow: inset -8px -8px 16px rgba(0,0,0,0.3);
 }
-.planet-sun{
-  top: 76%; left: 106%;
-  width: 109px; height: 109px;
-  background: radial-gradient(circle at 32% 28%, #FFDD8A 0%, #F2A430 50%, #C2540A 100%);
-  box-shadow: 0 0 28px rgba(242,164,48,0.35);
-  animation: planetSpin 70s linear infinite;
+.planet-saturn::after{
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+  width: 175%; height: 42%;
+  border: 3px solid rgba(226,198,140,0.6);
+  border-radius: 50%;
+  transform: translate(-50%,-50%) rotate(-18deg);
 }
-@keyframes planetSpin{
+.planet-mars{
+  width: 38px; height: 38px;
+  transform: translate(220px, -50%);
+  background: radial-gradient(circle at 32% 28%, #F2A98A 0%, #C1502A 48%, #6b2410 100%);
+  box-shadow: 0 0 16px rgba(193,80,42,0.4), inset -5px -5px 10px rgba(0,0,0,0.3);
+}
+@keyframes orbitSpin{
   from{ transform: rotate(0deg); }
   to{ transform: rotate(360deg); }
 }
@@ -757,7 +783,7 @@ form.contact-form{ display:grid; gap:20px; }
 .footer-grid ul li{ margin-bottom: 12px; }
 .footer-grid ul li a:hover{ color: var(--gold); }
 .footer-logo{ display:flex; align-items:center; gap:12px; margin-bottom: 20px; }
-.footer-logo img{ height: 67px; border-radius:50%; background:var(--white); padding:3px; }
+.footer-logo img{ height: 100px; border-radius:50%; background:var(--white); padding:3px; }
 .footer-logo span{ font-family: var(--font-heading); color: var(--white); letter-spacing:2px; }
 .footer-bottom{
   padding: 26px 0;
@@ -786,7 +812,7 @@ form.contact-form{ display:grid; gap:20px; }
 /* ===== Responsive ===== */
 @media (max-width: 1750px){
   .logo{ gap: 16px; }
-  .logo img{ height: 101px; }
+  .logo img{ height: 152px; }
   .logo-word{ font-size: 1.62rem; letter-spacing: 3px; }
   .main-nav ul{ gap: 18px; }
   .main-nav a{ font-size: 0.76rem; }
@@ -795,7 +821,7 @@ form.contact-form{ display:grid; gap:20px; }
 
 @media (max-width: 1360px){
   .logo{ gap: 13px; }
-  .logo img{ height: 84px; }
+  .logo img{ height: 126px; }
   .logo-word{ font-size: 1.38rem; letter-spacing: 2.4px; }
   .main-nav ul{ gap: 13px; }
   .main-nav a{ font-size: 0.7rem; }
@@ -803,11 +829,13 @@ form.contact-form{ display:grid; gap:20px; }
 }
 
 @media (max-width: 1160px){
-  .logo img{ height: 72px; }
-  .logo-word{ font-size: 1.2rem; letter-spacing: 1.8px; }
-  .main-nav ul{ gap: 9px; }
-  .main-nav a{ font-size: 0.64rem; }
-  .header-cta{ gap: 9px; }
+  .site-header .container{ gap: 20px; }
+  .logo{ gap: 12px; }
+  .logo img{ height: 96px; }
+  .logo-word{ font-size: 1.1rem; letter-spacing: 1.5px; }
+  .main-nav ul{ gap: 8px; }
+  .main-nav a{ font-size: 0.6rem; }
+  .header-cta{ gap: 8px; }
   .lang-switch{ display:none; }
 }
 
@@ -843,7 +871,7 @@ form.contact-form{ display:grid; gap:20px; }
   .footer-bottom{ justify-content:center; text-align:center; }
   .btn{ white-space: normal; text-align:center; }
   .hero-badges{ flex-wrap:wrap; gap: 32px; }
-  .planet{ display:none; }
+  .orbit{ display:none; }
 }
 
 @media (max-width: 600px){
