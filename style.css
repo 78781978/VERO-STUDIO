@@ -418,6 +418,24 @@ p{ margin: 0 0 16px; color: var(--gray); }
 }
 .split > *{ min-width: 0; }
 .split img{ border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+.about-logo-frame{
+  background: var(--galaxy-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 60px;
+  min-height: 340px;
+}
+.about-logo-frame img{
+  max-width: 60%;
+  border-radius: 50%;
+  background: var(--white);
+  padding: 14px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
 .values-list li{
   display:flex;
   gap: 16px;
