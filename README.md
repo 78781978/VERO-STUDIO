@@ -18,7 +18,7 @@ kontakt.html        — Kontakt (dane + formularz + Calendly)
 style.css           — Cały styl strony (kolory, layout, animacje, responsywność)
 script.js           — Menu mobilne, animacje scroll-reveal, canvas z węzłami AI w hero,
                        logika demo chatbota i agenta, akordeon FAQ, formularz kontaktowy
-logo.png            — Logo Vero Studio (PNG dostarczony przez klienta — patrz niżej)
+logo.svg            — Logo Vero Studio (plik dostarczony przez klienta)
 assets/             — Branded placeholdery SVG (zdjęcie założycielki, case studies, blog)
 en/                 — Pełne lustro strony w języku angielskim (te same nazwy plików)
 robots.txt          — Konfiguracja dla robotów wyszukiwarek
@@ -29,7 +29,7 @@ sitemap.xml         — Mapa strony z odnośnikami hreflang PL/EN
 
 To jest w pełni działający, ale **demonstracyjny** szkielet strony. Poniższe elementy są przykładowe i wymagają podmiany:
 
-1. **Logo** — obecnie używany jest przesłany plik `logo.png` (1254×1254, rastrowy). Masz źródłowe pliki SVG loga — podmień `logo.png` na plik wektorowy (np. `logo.svg`) i zaktualizuj wszystkie odwołania `src="logo.png"` / `src="../logo.png"` w plikach `.html` (najszybciej: znajdź i zamień we wszystkich plikach).
+1. **Logo** — ✅ gotowe. Używany jest plik `logo.svg` we wszystkich podstronach (PL i EN) oraz jako favicon. Uwaga: dostarczony plik SVG zawiera osadzony obrazek rastrowy (nie jest to logo w czystej wektorowej formie ze ścieżkami), więc jakość wizualna jest identyczna jak w oryginalnym PNG — plik jest po prostu w formacie SVG.
 2. **Dane kontaktowe** — e-mail (`hello@verostudio.pl`), telefon (`+48 000 000 000`) i miasto to placeholdery. Podmień w stopce oraz na `kontakt.html` / `en/kontakt.html`.
 3. **Formularz kontaktowy** — działa tylko demonstracyjnie (JS pokazuje komunikat sukcesu, nic nie wysyła). Aby realnie wysyłał e-maile, załóż darmowe konto na [Formspree](https://formspree.io) lub [EmailJS](https://www.emailjs.com) i podmień atrybut `action="https://formspree.io/f/TWOJ_KOD_FORMSPREE"` w `kontakt.html` i `en/kontakt.html`.
 4. **Kalendarz konsultacji** — link `https://calendly.com/vero-studio/konsultacja` jest przykładowy. Załóż konto na [Calendly](https://calendly.com) (lub innym narzędziu) i podmień link w `kontakt.html` / `en/kontakt.html`.
