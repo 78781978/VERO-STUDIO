@@ -34,7 +34,7 @@ To jest w pełni działający, ale **demonstracyjny** szkielet strony. Poniższe
 3. **Formularz kontaktowy** — działa tylko demonstracyjnie (JS pokazuje komunikat sukcesu, nic nie wysyła). Aby realnie wysyłał e-maile, załóż darmowe konto na [Formspree](https://formspree.io) lub [EmailJS](https://www.emailjs.com) i podmień atrybut `action="https://formspree.io/f/TWOJ_KOD_FORMSPREE"` w `kontakt.html` i `en/kontakt.html`.
 4. **Kalendarz konsultacji** — link `https://calendly.com/vero-studio/konsultacja` jest przykładowy. Załóż konto na [Calendly](https://calendly.com) (lub innym narzędziu) i podmień link w `kontakt.html` / `en/kontakt.html`.
 5. **Social media** — linki `#` w sekcji social w stopce i na `kontakt.html` — podmień na prawdziwe profile Instagram / LinkedIn / Facebook.
-6. **Zdjęcie założycielki** — `assets/founder-photo.svg` to placeholder. Podmień na prawdziwe zdjęcie Wioletty Pazdańskiej (zaktualizuj `src` w `o-nas.html` i `en/o-nas.html`).
+6. **Zdjęcie założycielki** — ✅ gotowe. Prawdziwe zdjęcie Wioletty Pazdańskiej (`logowp.svg`) jest już użyte na stronie "O nas". Grafika logo w sekcji "Poznaj Vero Studio" na stronie głównej to `logoph.svg`.
 7. **Case studies / portfolio** — `assets/portfolio-0X.svg` i opisy "Nazwa projektu 0X" na `portfolio.html` to placeholdery — podmień na prawdziwe realizacje, najlepiej z linkami do rzeczywistych projektów.
 8. **Opinie klientów** — przykładowe cytaty i inicjały na `index.html` i `portfolio.html` (sekcje `.testimonial-card`) — podmień na prawdziwe rekomendacje.
 9. **Wpisy blogowe** — `assets/blog-0X.svg` i treści na `blog.html` to placeholdery — podmień na prawdziwe artykuły.
