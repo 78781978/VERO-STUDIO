@@ -57,13 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
       w = canvas.width = canvas.offsetWidth;
       h = canvas.height = canvas.offsetHeight;
     }
+    const SCALE = 1.3; // moving elements enlarged 30%
+    const LINK_DIST = 170 * SCALE;
     function initNodes() {
       nodes = Array.from({ length: NODE_COUNT }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
         vx: (Math.random() - 0.5) * 0.25,
         vy: (Math.random() - 0.5) * 0.25,
-        r: Math.random() * 1.6 + 0.6
+        r: (Math.random() * 1.6 + 0.6) * SCALE,
+        star: Math.random() < 0.3
       }));
     }
     function step() {
@@ -78,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const a = nodes[i], b = nodes[j];
           const dx = a.x - b.x, dy = a.y - b.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 170) {
-            ctx.strokeStyle = `rgba(201,162,75,${(1 - dist / 170) * 0.35})`;
+          if (dist < LINK_DIST) {
+            ctx.strokeStyle = `rgba(201,162,75,${(1 - dist / LINK_DIST) * 0.35})`;
             ctx.lineWidth = 0.6;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
@@ -91,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nodes.forEach(n => {
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(232,214,160,0.85)';
+        ctx.fillStyle = n.star ? 'rgba(255,255,255,0.9)' : 'rgba(232,214,160,0.85)';
         ctx.fill();
       });
       requestAnimationFrame(step);
