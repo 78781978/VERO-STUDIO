@@ -300,32 +300,28 @@ p{ margin: 0 0 16px; color: var(--gray); }
 .planet{ position:absolute; border-radius:50%; pointer-events:none; z-index:1; }
 .planet-neptune{
   top: 150px; right: 7%;
-  width: 46px; height: 46px;
+  width: 60px; height: 60px;
   background: radial-gradient(circle at 32% 28%, #A9CDF0 0%, #3E6FC0 48%, #14264d 100%);
   box-shadow: 0 0 24px rgba(62,111,192,0.5), inset -6px -6px 14px rgba(0,0,0,0.35);
-  animation: planetFloat 9s ease-in-out infinite;
+  animation: planetSpin 40s linear infinite;
 }
 .planet-venus{
-  top: 54%; left: 102%;
-  width: 62px; height: 62px;
+  top: 54%; right: 102%;
+  width: 81px; height: 81px;
   background: radial-gradient(circle at 32% 28%, #F8E7BD 0%, #D9A65A 48%, #7c4f22 100%);
   box-shadow: 0 0 26px rgba(217,166,90,0.45), inset -8px -8px 16px rgba(0,0,0,0.3);
-  animation: planetFloat 7s ease-in-out infinite;
+  animation: planetSpin 55s linear infinite;
 }
 .planet-sun{
   top: 76%; left: 106%;
-  width: 84px; height: 84px;
-  background: radial-gradient(circle at 32% 28%, #FFF3B0 0%, #FFB020 48%, #E85D04 100%);
-  box-shadow: 0 0 55px rgba(255,176,32,0.6);
-  animation: planetFloat 6s ease-in-out infinite, planetGlow 4s ease-in-out infinite;
+  width: 109px; height: 109px;
+  background: radial-gradient(circle at 32% 28%, #FFDD8A 0%, #F2A430 50%, #C2540A 100%);
+  box-shadow: 0 0 28px rgba(242,164,48,0.35);
+  animation: planetSpin 70s linear infinite;
 }
-@keyframes planetFloat{
-  0%, 100%{ transform: translateY(0) rotate(0deg); }
-  50%{ transform: translateY(-14px) rotate(3deg); }
-}
-@keyframes planetGlow{
-  0%, 100%{ box-shadow: 0 0 55px rgba(255,176,32,0.6); }
-  50%{ box-shadow: 0 0 80px rgba(255,176,32,0.85); }
+@keyframes planetSpin{
+  from{ transform: rotate(0deg); }
+  to{ transform: rotate(360deg); }
 }
 
 /* ===== Page hero (subpages) ===== */
@@ -452,22 +448,18 @@ p{ margin: 0 0 16px; color: var(--gray); }
 .split > *{ min-width: 0; }
 .split img{ border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
 .about-logo-frame{
-  background: var(--galaxy-bg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--line);
+  overflow: hidden;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding: 60px;
-  min-height: 340px;
 }
 .about-logo-frame img{
-  max-width: 60%;
-  border-radius: 50%;
-  background: var(--white);
-  padding: 14px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .values-list li{
   display:flex;
