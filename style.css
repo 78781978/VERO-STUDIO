@@ -271,17 +271,18 @@ p{ margin: 0 0 16px; color: var(--gray); }
               linear-gradient(180deg, rgba(10,10,11,0.15), rgba(10,10,11,0.85) 90%);
 }
 .hero .container{ position:relative; z-index:2; }
-.hero-content{ max-width: 700px; }
+.hero-content{ max-width: 760px; position:relative; }
 .hero-content h1{ color: var(--white); }
 .hero-content p.lead{ color: rgba(255,255,255,0.65); font-size: 1.15rem; max-width: 560px; }
 .hero-actions{ display:flex; gap:18px; flex-wrap:wrap; margin-top: 8px; }
 
 .hero-badges{
   display:flex;
-  gap: 48px;
+  gap: 28px;
   margin-top: 64px;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
 }
+.hero-badges div{ min-width: 0; }
 .hero-badges div strong{
   display:block;
   font-family: var(--font-heading);
@@ -293,6 +294,38 @@ p{ margin: 0 0 16px; color: var(--gray); }
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: rgba(255,255,255,0.5);
+}
+
+/* ===== Decorative planets ===== */
+.planet{ position:absolute; border-radius:50%; pointer-events:none; z-index:1; }
+.planet-neptune{
+  top: 150px; right: 7%;
+  width: 46px; height: 46px;
+  background: radial-gradient(circle at 32% 28%, #A9CDF0 0%, #3E6FC0 48%, #14264d 100%);
+  box-shadow: 0 0 24px rgba(62,111,192,0.5), inset -6px -6px 14px rgba(0,0,0,0.35);
+  animation: planetFloat 9s ease-in-out infinite;
+}
+.planet-venus{
+  top: 54%; left: 102%;
+  width: 62px; height: 62px;
+  background: radial-gradient(circle at 32% 28%, #F8E7BD 0%, #D9A65A 48%, #7c4f22 100%);
+  box-shadow: 0 0 26px rgba(217,166,90,0.45), inset -8px -8px 16px rgba(0,0,0,0.3);
+  animation: planetFloat 7s ease-in-out infinite;
+}
+.planet-sun{
+  top: 76%; left: 106%;
+  width: 84px; height: 84px;
+  background: radial-gradient(circle at 32% 28%, #FFF3B0 0%, #FFB020 48%, #E85D04 100%);
+  box-shadow: 0 0 55px rgba(255,176,32,0.6);
+  animation: planetFloat 6s ease-in-out infinite, planetGlow 4s ease-in-out infinite;
+}
+@keyframes planetFloat{
+  0%, 100%{ transform: translateY(0) rotate(0deg); }
+  50%{ transform: translateY(-14px) rotate(3deg); }
+}
+@keyframes planetGlow{
+  0%, 100%{ box-shadow: 0 0 55px rgba(255,176,32,0.6); }
+  50%{ box-shadow: 0 0 80px rgba(255,176,32,0.85); }
 }
 
 /* ===== Page hero (subpages) ===== */
@@ -817,6 +850,8 @@ form.contact-form{ display:grid; gap:20px; }
   .pillar{ grid-template-columns: 60px 1fr; }
   .footer-bottom{ justify-content:center; text-align:center; }
   .btn{ white-space: normal; text-align:center; }
+  .hero-badges{ flex-wrap:wrap; gap: 32px; }
+  .planet{ display:none; }
 }
 
 @media (max-width: 600px){
