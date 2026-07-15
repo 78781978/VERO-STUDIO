@@ -1,6 +1,6 @@
 # Vero Studio — strona WWW
 
-Statyczna strona internetowa (HTML/CSS/JS, bez frameworków i procesu budowania) dla **Vero Studio by Wioletta Pazdańska** — butikowego studia projektującego strony WWW, sklepy eCommerce oraz automatyzacje, chatboty i agentów AI.
+Statyczna strona internetowa (HTML/CSS/JS, bez frameworków i procesu budowania) dla **Vero Studio by Wioletta Pazdańska** — studia premium projektującego strony WWW, sklepy eCommerce oraz automatyzacje, chatboty i agentów AI.
 
 Kolorystyka i typografia nawiązują bezpośrednio do przesłanego logo: głęboka czerń, szampańskie złoto i ecru, z akcentem szmaragdu w wybranych przyciskach CTA.
 
