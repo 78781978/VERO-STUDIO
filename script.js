@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       w = canvas.width = canvas.offsetWidth;
       h = canvas.height = canvas.offsetHeight;
     }
-    const SCALE = 1.3; // moving elements enlarged 30%
+    const SCALE = 1.69; // moving elements enlarged 30%, then another 30%
     const LINK_DIST = 170 * SCALE;
     function initNodes() {
       nodes = Array.from({ length: NODE_COUNT }, () => ({
