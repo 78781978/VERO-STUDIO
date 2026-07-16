@@ -201,4 +201,214 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(cycle, 2200);
   }
 
+  /* ===== Site-wide chat widget (rule-based lead-qualification assistant) =====
+     No backend, no API key — a decision tree that gets a visitor from an
+     opening question to booking the free consultation via Calendly, with a
+     mailto fallback. Swap this out for a real LLM-backed agent later. */
+  const widget = document.getElementById('chatWidget');
+  if (widget) {
+    const isEn = document.documentElement.lang === 'en';
+    const CALENDLY_URL = 'https://calendly.com/vero-studio/konsultacja';
+    const CONTACT_EMAIL = 'hello@verostudio.pl';
+
+    const copy = isEn ? {
+      greeting: "Hi! I'm the Vero Studio assistant 👋 What can I help you with?",
+      options: [
+        { id: 'www', label: 'Website / store quote', reply: "Great — we design premium websites and eCommerce stores built for conversion. What's your name?" },
+        { id: 'auto', label: 'AI automation', reply: "Good choice — AI automation can take repetitive tasks off your team's plate. What's your name?" },
+        { id: 'bot', label: 'Chatbot / AI agent', reply: "That's our specialty — chatbots and AI agents that answer customers 24/7. What's your name?" },
+        { id: 'unsure', label: 'Just browsing', reply: "No rush at all! Mind telling me your name so I can point you in the right direction?" }
+      ],
+      askEmail: (name) => `Great to meet you, ${name}! What's your email address? I'll send over some times for a free consultation.`,
+      invalidEmail: "Hmm, that email doesn't look quite right — mind double-checking it?",
+      final: (name) => `Thank you, ${name}! Book a slot below, or email us directly — we'll get back to you as soon as possible.`,
+      calendlyLabel: '📅 Book a free consultation',
+      emailLabel: '✉️ Email us',
+      restartLabel: '↺ Start over',
+      placeholderChoice: 'Type a message…',
+      placeholderName: 'Your name…',
+      placeholderEmail: 'Your email address…',
+      fallbackStart: 'You can type your own message, or just pick one of the options above –',
+      mailSubject: 'Free consultation request — Vero Studio',
+      mailBody: (name, email, interest) => `Hi Vero Studio,%0D%0A%0D%0AName: ${name}%0D%0AEmail: ${email}%0D%0AInterested in: ${interest}%0D%0A%0D%0APlease reach out to arrange a free consultation.`,
+      toggleLabel: 'Open chat with the Vero Studio assistant'
+    } : {
+      greeting: 'Cześć! Jestem asystentem Vero Studio 👋 W czym mogę pomóc?',
+      options: [
+        { id: 'www', label: 'Wycena strony / sklepu', reply: 'Świetnie! Strony WWW i sklepy eCommerce projektujemy w klasie premium, pod konwersję. Jak masz na imię?' },
+        { id: 'auto', label: 'Automatyzacje AI', reply: 'Dobry wybór — automatyzacje AI potrafią przejąć powtarzalne zadania w Twojej firmie. Jak masz na imię?' },
+        { id: 'bot', label: 'Chatbot / Agent AI', reply: 'To nasza specjalność — chatboty i agenci AI, którzy odpowiadają klientom 24/7. Jak masz na imię?' },
+        { id: 'unsure', label: 'Jeszcze się rozglądam', reply: 'Jasne, nie ma pośpiechu! Zostawisz mi swoje imię, żebym mogła podpowiedzieć Ci, od czego zacząć?' }
+      ],
+      askEmail: (name) => `Miło Cię poznać, ${name}! Podaj adres e-mail, na który prześlę propozycję terminów bezpłatnej konsultacji.`,
+      invalidEmail: 'Hmm, ten adres e-mail nie wygląda poprawnie — możesz go poprawić?',
+      final: (name) => `Dziękuję, ${name}! Umów termin poniżej, albo napisz do nas bezpośrednio — odezwiemy się najszybciej, jak to możliwe.`,
+      calendlyLabel: '📅 Umów bezpłatną konsultację',
+      emailLabel: '✉️ Napisz e-mail',
+      restartLabel: '↺ Zacznij od nowa',
+      placeholderChoice: 'Napisz wiadomość…',
+      placeholderName: 'Twoje imię…',
+      placeholderEmail: 'Twój adres e-mail…',
+      fallbackStart: 'Możesz napisać własną wiadomość, albo wybrać jedną z opcji powyżej –',
+      mailSubject: 'Zapytanie o bezpłatną konsultację — Vero Studio',
+      mailBody: (name, email, interest) => `Cześć Vero Studio,%0D%0A%0D%0AImię: ${name}%0D%0AE-mail: ${email}%0D%0AZainteresowanie: ${interest}%0D%0A%0D%0AProszę o kontakt w sprawie bezpłatnej konsultacji.`,
+      toggleLabel: 'Otwórz czat z asystentem Vero Studio'
+    };
+
+    const toggle = document.getElementById('chatWidgetToggle');
+    const closeBtn = document.getElementById('chatWidgetClose');
+    const body = document.getElementById('chatWidgetBody');
+    const quick = document.getElementById('chatWidgetQuick');
+    const form = document.getElementById('chatWidgetForm');
+    const input = document.getElementById('chatWidgetInput');
+
+    if (toggle) toggle.setAttribute('aria-label', copy.toggleLabel);
+
+    let state = 'start';
+    let leadName = '';
+    let leadInterest = '';
+    let started = false;
+
+    function addBubble(role, text) {
+      const div = document.createElement('div');
+      div.className = 'chat-msg chat-msg--' + role;
+      div.textContent = text;
+      body.appendChild(div);
+      body.scrollTop = body.scrollHeight;
+      return div;
+    }
+
+    function showTyping() {
+      const t = document.createElement('div');
+      t.className = 'chat-typing';
+      t.innerHTML = '<span></span><span></span><span></span>';
+      body.appendChild(t);
+      body.scrollTop = body.scrollHeight;
+      return t;
+    }
+
+    function botSay(text, delay) {
+      return new Promise((resolve) => {
+        const t = showTyping();
+        setTimeout(() => {
+          t.remove();
+          addBubble('bot', text);
+          resolve();
+        }, delay || 800);
+      });
+    }
+
+    function clearQuick() { quick.innerHTML = ''; }
+
+    function renderOptions() {
+      clearQuick();
+      copy.options.forEach((opt) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = opt.label;
+        btn.addEventListener('click', () => choose(opt));
+        quick.appendChild(btn);
+      });
+      input.placeholder = copy.placeholderChoice;
+    }
+
+    function renderFinal() {
+      clearQuick();
+      const cal = document.createElement('a');
+      cal.href = CALENDLY_URL;
+      cal.target = '_blank';
+      cal.rel = 'noopener';
+      cal.className = 'chat-widget-cta';
+      cal.textContent = copy.calendlyLabel;
+      quick.appendChild(cal);
+
+      const mail = document.createElement('a');
+      mail.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(copy.mailSubject)}&body=${copy.mailBody(leadName, lastEmail, leadInterest)}`;
+      mail.textContent = copy.emailLabel;
+      quick.appendChild(mail);
+
+      const restart = document.createElement('button');
+      restart.type = 'button';
+      restart.textContent = copy.restartLabel;
+      restart.addEventListener('click', resetConversation);
+      quick.appendChild(restart);
+
+      form.classList.add('is-hidden');
+    }
+
+    let lastEmail = '';
+
+    function choose(opt) {
+      addBubble('user', opt.label);
+      leadInterest = opt.label;
+      clearQuick();
+      state = 'ask_name';
+      botSay(opt.reply, 700).then(() => { input.focus(); });
+    }
+
+    function resetConversation() {
+      body.innerHTML = '';
+      state = 'start';
+      leadName = '';
+      leadInterest = '';
+      lastEmail = '';
+      form.classList.remove('is-hidden');
+      started = false;
+      startConversation();
+    }
+
+    function startConversation() {
+      if (started) return;
+      started = true;
+      botSay(copy.greeting, 500).then(renderOptions);
+    }
+
+    function isValidEmail(v) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = input.value.trim();
+      if (!val) return;
+      input.value = '';
+
+      if (state === 'start') {
+        addBubble('user', val);
+        botSay(copy.fallbackStart, 700).then(renderOptions);
+        return;
+      }
+      if (state === 'ask_name') {
+        addBubble('user', val);
+        leadName = val;
+        state = 'ask_email';
+        input.placeholder = copy.placeholderEmail;
+        botSay(copy.askEmail(leadName), 700);
+        return;
+      }
+      if (state === 'ask_email') {
+        addBubble('user', val);
+        if (!isValidEmail(val)) {
+          botSay(copy.invalidEmail, 600);
+          return;
+        }
+        lastEmail = val;
+        state = 'done';
+        botSay(copy.final(leadName), 700).then(renderFinal);
+        return;
+      }
+      addBubble('user', val);
+      botSay(copy.final(leadName || ''), 500);
+    });
+
+    function openWidget() {
+      widget.classList.add('open');
+      startConversation();
+    }
+    function closeWidget() { widget.classList.remove('open'); }
+
+    if (toggle) toggle.addEventListener('click', openWidget);
+    if (closeBtn) closeBtn.addEventListener('click', closeWidget);
+  }
+
 });

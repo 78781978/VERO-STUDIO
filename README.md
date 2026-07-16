@@ -50,6 +50,14 @@ Strona zawiera w pełni interaktywne demo:
 
 To wyłącznie prezentacja poglądowa — nie łączy się z żadnym prawdziwym modelem AI ani API. Realne wdrożenie chatbota/agenta wymaga osobnej integracji (np. z Claude API, n8n, Make itp.) — do ustalenia w osobnym projekcie.
 
+## Asystent czatu na żywo (widget na wszystkich podstronach)
+
+W prawym dolnym rogu każdej podstrony (PL i EN) znajduje się **realnie działający, oparty na regułach asystent czatu** (logika w `script.js`, sekcja „Site-wide chat widget"). Prowadzi odwiedzającego od pytania o rodzaj usługi, przez zebranie imienia i adresu e-mail, aż po:
+- przycisk **„Umów bezpłatną konsultację"** prowadzący wprost do linku Calendly,
+- przycisk **„Napisz e-mail"** — otwiera domyślny program pocztowy z gotowym, wypełnionym e-mailem (imię, adres e-mail, wybrane zainteresowanie) do `hello@verostudio.pl`.
+
+To **nie jest** chatbot oparty o prawdziwe AI/LLM — to logika typu drzewko decyzyjne (bez kosztów, bez klucza API, działa od razu na GitHub Pages). Żeby podłączyć prawdziwy model AI (np. Claude), docelowo potrzebna będzie osobna funkcja backendowa (np. Cloudflare Worker / Vercel Function), która bezpiecznie przechowa klucz API — obecna strona jest w pełni statyczna i nie może go bezpiecznie trzymać po stronie przeglądarki. To osobny, przyszły etap prac.
+
 ## Wersja angielska (`en/`)
 
 Folder `en/` zawiera pełne lustro wszystkich podstron w języku angielskim, z tymi samymi nazwami plików (np. `en/uslugi.html`). Przełącznik języka w nagłówku (`PL / EN`) linkuje między odpowiadającymi sobie stronami. Linki `hreflang` w `<head>` oraz w `sitemap.xml` informują wyszukiwarki o obu wersjach językowych.
