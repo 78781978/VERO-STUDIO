@@ -435,14 +435,14 @@ p{ margin: 0 0 16px; color: var(--gray); }
 }
 .pillar-tags{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
 .pillar-tags span{
-  font-size: 0.74rem;
-  letter-spacing: 0.5px;
+  font-size: 0.82rem;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
-  padding: 6px 14px;
-  border: 1px solid var(--line);
+  padding: 7px 16px;
+  border: 1px solid var(--gold);
   border-radius: 30px;
-  color: var(--gold-dark);
-  font-family: var(--font-heading);
+  color: var(--black-soft);
+  font-family: var(--font-body);
   font-weight:600;
 }
 
