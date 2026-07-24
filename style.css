@@ -29,10 +29,10 @@
   --line: rgba(193,123,58,0.25);
 
   --galaxy-bg:
-    radial-gradient(ellipse 70% 60% at 15% 20%, rgba(124,58,237,0.38), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 88% 12%, rgba(37,99,235,0.32), transparent 60%),
-    radial-gradient(ellipse 65% 55% at 70% 88%, rgba(219,39,119,0.24), transparent 60%),
-    radial-gradient(ellipse 55% 45% at 20% 82%, rgba(193,123,58,0.18), transparent 55%),
+    radial-gradient(ellipse 70% 60% at 15% 20%, rgba(124,58,237,0.48), transparent 62%),
+    radial-gradient(ellipse 60% 50% at 88% 12%, rgba(37,99,235,0.42), transparent 62%),
+    radial-gradient(ellipse 65% 55% at 82% 86%, rgba(220,38,38,0.36), transparent 62%),
+    radial-gradient(ellipse 60% 50% at 16% 84%, rgba(234,179,8,0.32), transparent 58%),
     radial-gradient(ellipse 90% 70% at 50% 50%, rgba(30,20,55,0.9), transparent 75%),
     var(--black);
 
@@ -268,7 +268,7 @@ p{ margin: 0 0 16px; color: var(--gray); }
 .hero-vignette{
   position:absolute; inset:0;
   background: radial-gradient(ellipse at 20% 30%, rgba(193,123,58,0.14), transparent 55%),
-              linear-gradient(180deg, rgba(10,10,11,0.15), rgba(10,10,11,0.85) 90%);
+              linear-gradient(180deg, rgba(10,10,11,0.15), rgba(10,10,11,0.6) 90%);
 }
 .hero .container{ position:relative; z-index:2; }
 .hero-content{ max-width: 760px; position:relative; }
