@@ -530,7 +530,7 @@ p{ margin: 0 0 16px; color: var(--gray); }
   box-shadow: var(--shadow);
   background: var(--black);
 }
-.gallery-item img{ transition: transform 0.5s ease; opacity: 0.9; height:210px; width:100%; object-fit:cover; display:block; }
+.gallery-item img{ transition: transform 0.5s ease; opacity: 0.9; height:210px; width:100%; object-fit:contain; background: var(--black); display:block; }
 .gallery-item:hover img{ transform: scale(1.06); }
 .gallery-caption{
   padding: 20px 22px;
