@@ -825,14 +825,14 @@ p{ margin: 0 0 16px; color: var(--gray); }
 .contact-info-item div strong{ display:block; color: var(--white); margin-bottom: 2px;}
 .contact-info-item div span{ color: rgba(255,255,255,0.55); font-size: 0.95rem; }
 
-.calendly-box{
+.call-cta-box{
   margin-top: 32px;
   padding: 24px;
   border: 1px dashed var(--line);
   border-radius: var(--radius);
   text-align:center;
 }
-.calendly-box p{ color: rgba(255,255,255,0.55); margin-bottom:14px; font-size:0.9rem; }
+.call-cta-box p{ color: rgba(255,255,255,0.55); margin-bottom:14px; font-size:0.9rem; }
 
 form.contact-form{ display:grid; gap:20px; }
 .contact-form label{
