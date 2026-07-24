@@ -523,19 +523,18 @@ p{ margin: 0 0 16px; color: var(--gray); }
 
 /* ===== Portfolio / Gallery ===== */
 .gallery-item{
-  position:relative;
+  display:flex;
+  flex-direction:column;
   overflow:hidden;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   background: var(--black);
 }
-.gallery-item img{ transition: transform 0.5s ease; opacity: 0.9; }
+.gallery-item img{ transition: transform 0.5s ease; opacity: 0.9; height:210px; width:100%; object-fit:cover; display:block; }
 .gallery-item:hover img{ transform: scale(1.06); }
 .gallery-caption{
-  position:absolute;
-  inset:auto 0 0 0;
   padding: 20px 22px;
-  background: linear-gradient(0deg, rgba(10,10,11,0.92), transparent);
+  background: var(--black);
 }
 .gallery-caption span{
   display:block;
