@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const dx = a.x - b.x, dy = a.y - b.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < LINK_DIST) {
-            ctx.strokeStyle = `rgba(201,162,75,${(1 - dist / LINK_DIST) * 0.35})`;
+            ctx.strokeStyle = `rgba(193,123,58,${(1 - dist / LINK_DIST) * 0.35})`;
             ctx.lineWidth = 0.6;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nodes.forEach(n => {
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = n.star ? 'rgba(255,255,255,0.9)' : 'rgba(232,214,160,0.85)';
+        ctx.fillStyle = n.star ? 'rgba(255,255,255,0.9)' : 'rgba(227,168,104,0.85)';
         ctx.fill();
       });
       requestAnimationFrame(step);

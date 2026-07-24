@@ -1,7 +1,7 @@
 /* ===========================================================
    VERO STUDIO by Wioletta Pazdańska — style.css
    Strategy. Design. Intelligent Automation.
-   Kolorystyka wg logo: czerń + szampańskie złoto + ecru,
+   Kolorystyka wg logo: czerń + miedziane złoto + ecru,
    z akcentem szmaragdu w CTA i elementach interaktywnych.
    =========================================================== */
 
@@ -10,11 +10,11 @@
   --black-soft: #17171A;
   --black-elev: #202024;
 
-  --gold: #C9A24B;
-  --gold-light: #E8D6A0;
-  --gold-pale: #F3E9CC;
-  --gold-dark: #8C6D2F;
-  --gold-gradient: linear-gradient(135deg, #E8D6A0 0%, #C9A24B 45%, #8C6D2F 100%);
+  --gold: #C17B3A;
+  --gold-light: #E3A868;
+  --gold-pale: #F5E1C4;
+  --gold-dark: #7A4419;
+  --gold-gradient: linear-gradient(135deg, #E3A868 0%, #C17B3A 45%, #7A4419 100%);
 
   --emerald: #0E5C4C;
   --emerald-light: #1E9C7C;
@@ -26,13 +26,13 @@
 
   --gray: #6E6A62;
   --gray-light: #D8D2C2;
-  --line: rgba(201,162,75,0.25);
+  --line: rgba(193,123,58,0.25);
 
   --galaxy-bg:
-    radial-gradient(ellipse 70% 60% at 15% 20%, rgba(124,58,237,0.38), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 88% 12%, rgba(37,99,235,0.32), transparent 60%),
-    radial-gradient(ellipse 65% 55% at 70% 88%, rgba(219,39,119,0.24), transparent 60%),
-    radial-gradient(ellipse 55% 45% at 20% 82%, rgba(201,162,75,0.18), transparent 55%),
+    radial-gradient(ellipse 70% 60% at 15% 20%, rgba(124,58,237,0.48), transparent 62%),
+    radial-gradient(ellipse 60% 50% at 88% 12%, rgba(37,99,235,0.42), transparent 62%),
+    radial-gradient(ellipse 65% 55% at 82% 86%, rgba(220,38,38,0.36), transparent 62%),
+    radial-gradient(ellipse 60% 50% at 16% 84%, rgba(234,179,8,0.32), transparent 58%),
     radial-gradient(ellipse 90% 70% at 50% 50%, rgba(30,20,55,0.9), transparent 75%),
     var(--black);
 
@@ -157,7 +157,7 @@ p{ margin: 0 0 16px; color: var(--gray); }
   background: var(--gold-gradient);
   color: var(--black);
 }
-.btn--gold:hover{ filter: brightness(1.08); transform: translateY(-2px); box-shadow: 0 14px 30px rgba(201,162,75,0.35); }
+.btn--gold:hover{ filter: brightness(1.08); transform: translateY(-2px); box-shadow: 0 14px 30px rgba(193,123,58,0.35); }
 .btn--emerald{
   background: var(--emerald);
   color: var(--white);
@@ -191,7 +191,7 @@ p{ margin: 0 0 16px; color: var(--gray); }
 .site-header.scrolled{
   background: rgba(10,10,11,0.92);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(201,162,75,0.18);
+  border-bottom: 1px solid rgba(193,123,58,0.18);
   padding: 6px 0;
 }
 .site-header .container{
@@ -267,8 +267,8 @@ p{ margin: 0 0 16px; color: var(--gray); }
 .hero-nodes{ position:absolute; inset:0; width:100%; height:100%; opacity:0.7; }
 .hero-vignette{
   position:absolute; inset:0;
-  background: radial-gradient(ellipse at 20% 30%, rgba(201,162,75,0.14), transparent 55%),
-              linear-gradient(180deg, rgba(10,10,11,0.15), rgba(10,10,11,0.85) 90%);
+  background: radial-gradient(ellipse at 20% 30%, rgba(193,123,58,0.14), transparent 55%),
+              linear-gradient(180deg, rgba(10,10,11,0.15), rgba(10,10,11,0.6) 90%);
 }
 .hero .container{ position:relative; z-index:2; }
 .hero-content{ max-width: 760px; position:relative; }
@@ -667,7 +667,7 @@ p{ margin: 0 0 16px; color: var(--gray); }
   display:flex; gap:20px; padding: 22px 26px; border-bottom: 1px solid var(--line);
   opacity:0.35; transition: opacity 0.5s ease, background var(--transition);
 }
-.agent-step.active{ opacity:1; background: rgba(201,162,75,0.06); }
+.agent-step.active{ opacity:1; background: rgba(193,123,58,0.06); }
 .agent-step:last-child{ border-bottom:none; }
 .agent-step-icon{
   width: 40px; height:40px; border-radius:50%; flex-shrink:0;
@@ -888,15 +888,15 @@ form.contact-form{ display:grid; gap:20px; }
   cursor:pointer;
   display:flex; align-items:center; justify-content:center;
   font-size:1.7rem;
-  box-shadow: 0 10px 30px rgba(201,162,75,0.45);
+  box-shadow: 0 10px 30px rgba(193,123,58,0.45);
   transition: transform var(--transition);
   animation: chatPulse 2.6s ease-in-out infinite;
 }
 .chat-widget-toggle:hover{ transform: scale(1.08); }
 .chat-widget.open .chat-widget-toggle{ display:none; }
 @keyframes chatPulse{
-  0%, 100%{ box-shadow: 0 10px 30px rgba(201,162,75,0.45); }
-  50%{ box-shadow: 0 10px 42px rgba(201,162,75,0.7); }
+  0%, 100%{ box-shadow: 0 10px 30px rgba(193,123,58,0.45); }
+  50%{ box-shadow: 0 10px 42px rgba(193,123,58,0.7); }
 }
 
 .chat-widget-panel{
