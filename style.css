@@ -593,10 +593,12 @@ p{ margin: 0 0 16px; color: var(--gray); }
   box-shadow: var(--shadow);
   padding: 36px 32px;
   border-left: 2px solid var(--gold);
+  display:flex;
+  flex-direction:column;
 }
 .testimonial-stars{ color: var(--gold); letter-spacing:2px; margin-bottom:16px; font-size: 0.9rem; }
 .testimonial-quote{ font-style: italic; color: var(--black-soft); font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 22px; }
-.testimonial-author{ display:flex; align-items:center; gap:14px; }
+.testimonial-author{ display:flex; align-items:center; gap:14px; margin-top:auto; padding-top:22px; }
 .testimonial-avatar{
   width: 46px; height:46px; border-radius:50%;
   background: var(--gold-gradient);
