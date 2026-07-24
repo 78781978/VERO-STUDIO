@@ -679,19 +679,18 @@ p{ margin: 0 0 16px; color: var(--gray); }
 .article-body p{ font-size: 1.02rem; }
 .article-body ul{ margin: 0 0 20px; }
 .article-body ul li{
-  display:flex;
-  gap: 14px;
+  position:relative;
+  padding-left: 24px;
   margin-bottom: 14px;
-  align-items:flex-start;
   color: var(--gray);
 }
 .article-body ul li::before{
   content:"";
-  min-width:8px; height:8px;
-  margin-top:8px;
+  position:absolute;
+  left:0; top:8px;
+  width:8px; height:8px;
   background: var(--gold-gradient);
   transform: rotate(45deg);
-  flex-shrink:0;
 }
 .article-body blockquote{
   margin: 36px 0;
