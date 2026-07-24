@@ -602,9 +602,29 @@ p{ margin: 0 0 16px; color: var(--gray); }
   background: var(--gold-gradient);
   display:flex; align-items:center; justify-content:center;
   font-family: var(--font-heading); font-weight:700; color: var(--black);
+  flex-shrink:0;
 }
-.testimonial-author strong{ display:block; font-family: var(--font-heading); font-size: 0.95rem; }
-.testimonial-author span{ font-size: 0.8rem; color: var(--gray); }
+.testimonial-author > div{
+  display:flex;
+  align-items:baseline;
+  flex-wrap:nowrap;
+  gap:8px;
+  min-width:0;
+  overflow:hidden;
+}
+.testimonial-author strong{
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.testimonial-author span{
+  font-size: 0.74rem;
+  color: var(--gray);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
 
 /* ===== Blog ===== */
 .blog-card{
