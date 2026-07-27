@@ -974,7 +974,7 @@ form.contact-form{ display:grid; gap:20px; }
   .pillar{ grid-template-columns: 60px 1fr; }
   .footer-bottom{ justify-content:center; text-align:center; }
   .btn{ white-space: normal; text-align:center; }
-  .hero-badges{ flex-wrap:wrap; gap: 32px; }
+  .hero-badges{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
   .orbit{ display:none; }
 }
 
