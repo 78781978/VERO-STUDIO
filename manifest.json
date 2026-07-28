@@ -1,0 +1,13 @@
+{
+  "name": "Vero Studio",
+  "short_name": "Vero Studio",
+  "description": "Strony WWW, eCommerce, automatyzacje AI, chatboty i agenci AI oraz grafika i branding.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0A0A0B",
+  "theme_color": "#C17B3A",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
