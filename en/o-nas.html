@@ -9,22 +9,67 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="About - Vero Studio by Wioletta Pazdańska">
 <meta property="og:description" content="Strategy. Design. Intelligent Automation, meet the studio and its founder.">
-<meta property="og:image" content="https://verostudio.pl/assets/og-image.png">
-<meta property="og:image:secure_url" content="https://verostudio.pl/assets/og-image.png">
-<meta property="og:image:type" content="image/png">
+<meta property="og:image" content="https://verostudio.pl/assets/og-image.jpg">
+<meta property="og:image:secure_url" content="https://verostudio.pl/assets/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
 <meta property="og:url" content="https://verostudio.pl/en/o-nas.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://verostudio.pl/assets/og-image.png">
+<meta name="twitter:image" content="https://verostudio.pl/assets/og-image.jpg">
 <link rel="alternate" hreflang="pl" href="../o-nas.html">
 <link rel="icon" type="image/svg+xml" href="../logo.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
 <link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Vero Studio",
+  "url": "https://verostudio.pl/en/index.html",
+  "logo": "https://verostudio.pl/assets/og-image.jpg",
+  "image": "https://verostudio.pl/assets/og-image.jpg",
+  "description": "Vero Studio is Wioletta Pazdańska's premium digital studio: websites, eCommerce stores, AI automation, AI chatbots and agents, graphic design and branding.",
+  "email": "info@verostudio.pl",
+  "telephone": "+48573377330",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kraków",
+    "addressCountry": "PL"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Wioletta Pazdańska"
+  },
+  "areaServed": "Worldwide"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://verostudio.pl/en/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://verostudio.pl/en/o-nas.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="container">
@@ -48,7 +93,7 @@
   </div>
 </header>
 
-<section class="page-hero">
+<section id="main" class="page-hero">
   <canvas class="hero-nodes" style="position:absolute;inset:0;opacity:0.55;"></canvas>
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About</span></div>
@@ -61,7 +106,7 @@
   <div class="container">
     <div class="split">
       <div class="founder-photo reveal">
-        <img src="../logowp.svg" alt="Wioletta Pazdańska - founder of Vero Studio">
+        <img src="../logowp.svg" alt="Wioletta Pazdańska - founder of Vero Studio" loading="lazy">
       </div>
       <div class="reveal reveal-delay-1">
         <span class="eyebrow">Founder</span>
@@ -188,6 +233,7 @@
     </div>
     <div class="footer-bottom">
       <span>© <span id="year">2026</span> Vero Studio by Wioletta Pazdańska. All rights reserved.</span>
+      <span><a href="../polityka-prywatnosci.html">Privacy Policy</a></span>
     </div>
   </div>
 </footer>

@@ -2,38 +2,144 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://verostudio.pl/index.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/index.html"/>
   </url>
   <url>
     <loc>https://verostudio.pl/o-nas.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/o-nas.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/o-nas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/o-nas.html"/>
   </url>
   <url>
     <loc>https://verostudio.pl/uslugi.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/uslugi.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/uslugi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/uslugi.html"/>
   </url>
   <url>
     <loc>https://verostudio.pl/portfolio.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/portfolio.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/portfolio.html"/>
   </url>
   <url>
     <loc>https://verostudio.pl/cennik.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/cennik.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/cennik.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/cennik.html"/>
   </url>
   <url>
     <loc>https://verostudio.pl/blog.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/blog.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/blog.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/blog-strona-premium.html</loc>
+    <lastmod>2026-07-28</lastmod>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/blog-agent-ai.html</loc>
+    <lastmod>2026-07-28</lastmod>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/blog-checklist-ecommerce.html</loc>
+    <lastmod>2026-07-28</lastmod>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/blog-rebranding.html</loc>
+    <lastmod>2026-07-28</lastmod>
   </url>
   <url>
     <loc>https://verostudio.pl/demo.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/demo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/demo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/demo.html"/>
   </url>
   <url>
     <loc>https://verostudio.pl/kontakt.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/kontakt.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/kontakt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/kontakt.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/polityka-prywatnosci.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/polityka-prywatnosci.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/polityka-prywatnosci.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/polityka-prywatnosci.html"/>
   </url>
   <url>
     <loc>https://verostudio.pl/en/index.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/index.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/en/o-nas.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/o-nas.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/o-nas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/o-nas.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/en/uslugi.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/uslugi.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/uslugi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/uslugi.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/en/portfolio.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/portfolio.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/en/cennik.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/cennik.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/cennik.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/cennik.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/en/blog.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/blog.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/en/demo.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/demo.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/demo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/demo.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/en/kontakt.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/kontakt.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/kontakt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/kontakt.html"/>
+  </url>
+  <url>
+    <loc>https://verostudio.pl/en/polityka-prywatnosci.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verostudio.pl/en/polityka-prywatnosci.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://verostudio.pl/polityka-prywatnosci.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verostudio.pl/polityka-prywatnosci.html"/>
   </url>
 </urlset>
